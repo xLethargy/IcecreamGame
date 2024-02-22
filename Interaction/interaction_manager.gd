@@ -29,4 +29,3 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_released("interact") or !can_interact:
 		if active_area != null:
 			active_area.interact_released.call()
-		

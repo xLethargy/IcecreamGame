@@ -1,4 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7x1xa2w3gvjd"]
+[gd_scene load_steps=8 format=3 uid="uid://c7x1xa2w3gvjd"]
+
+[ext_resource type="Script" path="res://Models/Icecream/cone.gd" id="1_jundc"]
+[ext_resource type="PackedScene" uid="uid://byeiiaine1hik" path="res://Interaction/interaction_area.tscn" id="2_g0ogk"]
+[ext_resource type="Material" uid="uid://cohyd83poom3k" path="res://Materials/chocolate.tres" id="3_8fawy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0s18h"]
 albedo_color = Color(0.780392, 0.505882, 0.141176, 1)
@@ -9,16 +13,30 @@ top_radius = 0.0
 bottom_radius = 0.15
 height = 0.35
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_70ac5"]
-height = 0.34954
-radius = 0.150771
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x2d3m"]
+height = 0.35
+radius = 0.150699
 
-[node name="Cone" type="StaticBody3D"]
+[sub_resource type="SphereMesh" id="SphereMesh_15epi"]
+material = ExtResource("3_8fawy")
+radius = 0.15
+height = 0.3
+
+[node name="Cone" type="Node3D" groups=["Cone"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_jundc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0.175, 0)
 mesh = SubResource("CylinderMesh_k00i0")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.175, 0)
-shape = SubResource("CylinderShape3D_70ac5")
+[node name="InteractionArea" parent="." instance=ExtResource("2_g0ogk")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.175198, 0)
+shape = SubResource("CylinderShape3D_x2d3m")
+
+[node name="Icecream" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.388031, 0)
+visible = false
+mesh = SubResource("SphereMesh_15epi")

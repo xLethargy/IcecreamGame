@@ -1,16 +1,20 @@
 extends CharacterBody3D
 
-var speed : float = 5
+var speed : float = 4
 var jump_velocity : float = 4.5
 var fall_speed : float = 15
 
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
+@onready var hand = %Hand
 var sensitivity : float = 0.005
 
 var collider = null
 
 var called : bool = false
+
+var cone_scene = preload("res://Models/Icecream/cone.tscn")
+
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:

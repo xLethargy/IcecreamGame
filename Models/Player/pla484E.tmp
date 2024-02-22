@@ -26,7 +26,7 @@ collide_with_areas = true
 
 [node name="Hand" type="Node3D" parent="Neck/Camera3D"]
 unique_name_in_owner = true
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.315417, -0.600435, -0.586886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.315417, -0.600435, -0.586886)
 
 [node name="Hitbox" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_o07s8")

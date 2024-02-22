@@ -26,8 +26,9 @@ size = Vector3(0.3, 0.8, 0.3)
 size = Vector3(0.3, 0.8, 0.3)
 
 [node name="Stack" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="ConesStack1" type="StaticBody3D" parent="."]
+[node name="ConesStack1" type="StaticBody3D" parent="." groups=["Cone"]]
 script = ExtResource("1_qi2bx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ConesStack1"]
@@ -96,7 +97,7 @@ script = ExtResource("1_k7cia")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("BoxShape3D_dlt50")
 
-[node name="ConesStack2" type="StaticBody3D" parent="."]
+[node name="ConesStack2" type="StaticBody3D" parent="." groups=["Cone"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0, 0)
 script = ExtResource("1_qi2bx")
 
@@ -166,7 +167,7 @@ script = ExtResource("1_k7cia")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("BoxShape3D_dlt50")
 
-[node name="ConesStack3" type="StaticBody3D" parent="."]
+[node name="ConesStack3" type="StaticBody3D" parent="." groups=["Cone"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 0)
 script = ExtResource("1_qi2bx")
 
