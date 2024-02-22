@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxhtotob3uo7y"]
+
+[ext_resource type="PackedScene" uid="uid://b1sgmuuibhjrt" path="res://Models/Player/player.tscn" id="1_omd05"]
+[ext_resource type="PackedScene" uid="uid://c4qf7mdlisslr" path="res://Models/Truck/icecream_truck.tscn" id="2_j22dh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h4eul"]
+size = Vector3(30, 1, 30)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i3gxc"]
+size = Vector3(30, 1, 30)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_la6tn"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ffsxr"]
+sky_material = SubResource("ProceduralSkyMaterial_la6tn")
+
+[sub_resource type="Environment" id="Environment_yibl8"]
+background_mode = 2
+sky = SubResource("Sky_ffsxr")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Level" type="Node3D"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_h4eul")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_i3gxc")
+skeleton = NodePath("../..")
+
+[node name="Player" type="Node3D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("1_omd05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yibl8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 250.0
+
+[node name="IcecreamTruck" parent="." instance=ExtResource("2_j22dh")]
+
+[editable path="Player/Player"]

@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=3 uid="uid://e6sr5200qfdc"]
+
+[ext_resource type="Material" uid="uid://dv8ko6mafx8x8" path="res://Materials/metal.tres" id="1_f51gf"]
+[ext_resource type="Script" path="res://Models/Truck/ice_cream_machine.gd" id="1_m12uo"]
+[ext_resource type="Material" uid="uid://cy2ma1lj5vcmq" path="res://Materials/plastic.tres" id="2_4y8h6"]
+[ext_resource type="PackedScene" uid="uid://byeiiaine1hik" path="res://Interaction/interaction_area.tscn" id="4_ngkx3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dumrt"]
+material = ExtResource("1_f51gf")
+size = Vector3(0.8, 1, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lgxfy"]
+material = ExtResource("1_f51gf")
+size = Vector3(0.8, 0.25, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gx1vj"]
+material = ExtResource("2_4y8h6")
+size = Vector3(0.2, 0.15, 0.25)
+
+[sub_resource type="SphereMesh" id="SphereMesh_5mdu4"]
+material = ExtResource("2_4y8h6")
+radius = 0.025
+height = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ohns"]
+metallic = 1.0
+roughness = 0.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_6bkm1"]
+material = SubResource("StandardMaterial3D_8ohns")
+size = Vector3(0.025, 0.15, 0.025)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gr3jn"]
+albedo_color = Color(0.803922, 0.803922, 0.803922, 1)
+metallic = 0.75
+roughness = 0.35
+
+[sub_resource type="BoxMesh" id="BoxMesh_77dnx"]
+material = SubResource("StandardMaterial3D_gr3jn")
+size = Vector3(0.6, 0.5, 0.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5f2gr"]
+material = ExtResource("1_f51gf")
+size = Vector3(0.1, 0.5, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u4w63"]
+material = ExtResource("1_f51gf")
+size = Vector3(0.6, 0.5, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7k3ih"]
+size = Vector3(0.8, 1.75, 0.95)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n0cfk"]
+size = Vector3(1, 1.7677, 1)
+
+[node name="IceCreamMachine" type="StaticBody3D" groups=["Interactable"]]
+script = ExtResource("1_m12uo")
+
+[node name="Meshes" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.05)
+mesh = SubResource("BoxMesh_dumrt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.625, -0.05)
+mesh = SubResource("BoxMesh_lgxfy")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0.325)
+mesh = SubResource("BoxMesh_gx1vj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28119, 0.325)
+mesh = SubResource("SphereMesh_5mdu4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0.465)
+mesh = SubResource("BoxMesh_6bkm1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.1)
+mesh = SubResource("BoxMesh_77dnx")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 1.25, -0.05)
+mesh = SubResource("BoxMesh_5f2gr")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.45)
+mesh = SubResource("BoxMesh_u4w63")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 1.25, -0.05)
+mesh = SubResource("BoxMesh_5f2gr")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, -0.0237793)
+shape = SubResource("BoxShape3D_7k3ih")
+
+[node name="InteractionArea" parent="." groups=["Interactable"] instance=ExtResource("4_ngkx3")]
+collision_layer = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.932447, 0)
+shape = SubResource("BoxShape3D_n0cfk")
