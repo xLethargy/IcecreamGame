@@ -29,13 +29,11 @@ func _process(_delta: float) -> void:
 
 func _raycasting_interaction():
 	if %RayCast3D.get_collider() != null and %RayCast3D.get_collider().name == "InteractionArea":
-		if %RayCast3D.get_collider().is_in_group("Interactable") and !called:
+		if %RayCast3D.get_collider().is_in_group("Interactable"):
 			collider = %RayCast3D.get_collider()
 			collider.call_register_area()
-			called = true
-	elif collider != null and called:
+	elif collider != null:
 		collider.call_unregister_area()
-		called = false
 
 func _physics_process(delta):
 	if !is_on_floor():

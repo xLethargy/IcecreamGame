@@ -38,52 +38,52 @@ shape = SubResource("BoxShape3D_q7guj")
 script = ExtResource("2_ljrn6")
 
 [node name="Cone1" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.625, 0)
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.175, -1.5299e-08)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
 [node name="Cone2" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.575, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone3" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.525, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone4" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.475, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone5" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.425, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone6" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.375, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone7" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.325, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone8" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.275, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone9" type="MeshInstance3D" parent="ConesStack1/Cones"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.225, -1.5299e-08)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
+[node name="Cone3" type="MeshInstance3D" parent="ConesStack1/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.275, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone4" type="MeshInstance3D" parent="ConesStack1/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.325, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone5" type="MeshInstance3D" parent="ConesStack1/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.375, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone6" type="MeshInstance3D" parent="ConesStack1/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.425, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone7" type="MeshInstance3D" parent="ConesStack1/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.475, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone8" type="MeshInstance3D" parent="ConesStack1/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.525, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone9" type="MeshInstance3D" parent="ConesStack1/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.575, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
 [node name="Cone10" type="MeshInstance3D" parent="ConesStack1/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.175, -1.5299e-08)
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.625, 0)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
@@ -108,52 +108,52 @@ shape = SubResource("BoxShape3D_euvai")
 script = ExtResource("2_ljrn6")
 
 [node name="Cone1" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.625, 0)
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.175, -1.5299e-08)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
 [node name="Cone2" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.575, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone3" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.525, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone4" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.475, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone5" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.425, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone6" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.375, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone7" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.325, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone8" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.275, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone9" type="MeshInstance3D" parent="ConesStack2/Cones"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.225, -1.5299e-08)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
+[node name="Cone3" type="MeshInstance3D" parent="ConesStack2/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.275, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone4" type="MeshInstance3D" parent="ConesStack2/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.325, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone5" type="MeshInstance3D" parent="ConesStack2/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.375, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone6" type="MeshInstance3D" parent="ConesStack2/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.425, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone7" type="MeshInstance3D" parent="ConesStack2/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.475, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone8" type="MeshInstance3D" parent="ConesStack2/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.525, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone9" type="MeshInstance3D" parent="ConesStack2/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.575, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
 [node name="Cone10" type="MeshInstance3D" parent="ConesStack2/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.175, -1.5299e-08)
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.625, 0)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
@@ -178,52 +178,52 @@ shape = SubResource("BoxShape3D_h41eb")
 script = ExtResource("2_ljrn6")
 
 [node name="Cone1" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.625, 0)
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.175, -1.5299e-08)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
 [node name="Cone2" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.575, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone3" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.525, -1.77636e-15)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone4" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.475, 1.77636e-15)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone5" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.425, 0)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone6" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.375, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone7" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.325, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone8" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.275, -1.5299e-08)
-mesh = SubResource("CylinderMesh_k00i0")
-skeleton = NodePath("")
-
-[node name="Cone9" type="MeshInstance3D" parent="ConesStack3/Cones"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.225, -1.5299e-08)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
+[node name="Cone3" type="MeshInstance3D" parent="ConesStack3/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.275, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone4" type="MeshInstance3D" parent="ConesStack3/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.325, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone5" type="MeshInstance3D" parent="ConesStack3/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.375, -1.5299e-08)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone6" type="MeshInstance3D" parent="ConesStack3/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.425, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone7" type="MeshInstance3D" parent="ConesStack3/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.475, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone8" type="MeshInstance3D" parent="ConesStack3/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.525, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
+[node name="Cone9" type="MeshInstance3D" parent="ConesStack3/Cones"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.575, 0)
+mesh = SubResource("CylinderMesh_k00i0")
+skeleton = NodePath("")
+
 [node name="Cone10" type="MeshInstance3D" parent="ConesStack3/Cones"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.175, -1.5299e-08)
+transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0.625, 0)
 mesh = SubResource("CylinderMesh_k00i0")
 skeleton = NodePath("")
 
