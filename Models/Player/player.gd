@@ -23,15 +23,15 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_raycasting_interaction()
 	
 
 func _raycasting_interaction():
-	if $Neck/RayCast3D.get_collider() != null:
-		collider = $Neck/RayCast3D.get_collider()
-		if collider.is_in_group("Interactable") and !called:
-			collider.call_register_area() # test
+	if %RayCast3D.get_collider() != null and %RayCast3D.get_collider().name == "InteractionArea":
+		if %RayCast3D.get_collider().is_in_group("Interactable") and !called:
+			collider = %RayCast3D.get_collider()
+			collider.call_register_area()
 			called = true
 	elif collider != null and called:
 		collider.call_unregister_area()

@@ -7,10 +7,15 @@ class_name InteractionArea
 var interact : Callable = func():
 	pass
 
+var interact_released : Callable = func():
+	pass
+
 
 func call_register_area():
+	%Label.show()
 	InteractionManager.register_area(self)
 
 
 func call_unregister_area():
+	%Label.hide()
 	InteractionManager.unregister_area()

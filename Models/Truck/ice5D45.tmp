@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://e6sr5200qfdc"]
+[gd_scene load_steps=27 format=3 uid="uid://e6sr5200qfdc"]
 
 [ext_resource type="Material" uid="uid://dv8ko6mafx8x8" path="res://Materials/metal.tres" id="1_f51gf"]
 [ext_resource type="Script" path="res://Models/Truck/ice_cream_machine.gd" id="1_m12uo"]
@@ -74,7 +74,7 @@ size = Vector3(0.0751953, 0.0748413, 0.0439758)
 
 [sub_resource type="Animation" id="Animation_ply3r"]
 resource_name = "icecream_dispense"
-length = 1.5
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -82,22 +82,10 @@ tracks/0/path = NodePath("Icecream:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1, 0, 1), Vector3(1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Icecream:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1.2707, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_n1ihl"]
@@ -129,7 +117,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_8amu8"]
 resource_name = "icecream_end"
-length = 1.5
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -137,34 +125,17 @@ tracks/0/path = NodePath("Icecream:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 1.2707, 0), Vector3(0, 0.9, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_wq2kt"]
-resource_name = "icecream_flow"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icecream:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1, 1, 1), Vector3(1, 1, 1)]
+"values": [Vector3(0, 1.2707, 0), Vector3(0, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yag62"]
 _data = {
 "RESET": SubResource("Animation_n1ihl"),
 "icecream_dispense": SubResource("Animation_ply3r"),
-"icecream_end": SubResource("Animation_8amu8"),
-"icecream_flow": SubResource("Animation_wq2kt")
+"icecream_end": SubResource("Animation_8amu8")
 }
 
 [node name="IceCreamMachine" type="StaticBody3D"]
@@ -228,7 +199,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.638, 0.413)
 mesh = SubResource("BoxMesh_1c70g")
 
 [node name="Icecream" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2707, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1.2707, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Icecream"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140308, 0.325)
@@ -259,7 +230,3 @@ reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_yag62")
 }
-
-[node name="HeldCheckTimer" type="Timer" parent="."]
-wait_time = 1.5
-one_shot = true

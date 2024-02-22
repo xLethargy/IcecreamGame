@@ -150,13 +150,19 @@ shape = SubResource("BoxShape3D_xm02w")
 [node name="IceCreamMachine" parent="." instance=ExtResource("2_1shhc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0.5, 0)
 
-[node name="InteractionArea" parent="IceCreamMachine" index="2"]
+[node name="Icecream" parent="IceCreamMachine" index="2"]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
+
+[node name="InteractionArea" parent="IceCreamMachine" index="4"]
 message = "icecream1"
 
 [node name="IceCreamMachine2" parent="." instance=ExtResource("2_1shhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022942, 0.5, -1.37171)
 
-[node name="InteractionArea" parent="IceCreamMachine2" index="2"]
+[node name="Icecream" parent="IceCreamMachine2" index="2"]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
+
+[node name="InteractionArea" parent="IceCreamMachine2" index="4"]
 action_name = "poop"
 message = "icecreampoop"
 
