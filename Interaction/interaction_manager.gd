@@ -13,13 +13,16 @@ func register_area(area):
 	can_interact = true
 	
 
-func unregister_area():
+func unregister_area(area):
 	can_interact = false
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("interact") && can_interact:
+	if event.is_action("interact") and can_interact and active_area.is_in_group("Button"):
 		#print (active_area.message)
+		active_area.interact.call()
+	
+	if event.is_action_pressed("interact") and can_interact and !active_area.is_in_group("Button"):
 		active_area.interact.call()
 	
 	if event.is_action_released("interact") or !can_interact:

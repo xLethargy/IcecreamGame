@@ -12,10 +12,12 @@ var interact_released : Callable = func():
 
 
 func call_register_area():
-	%Label.show()
 	InteractionManager.register_area(self)
+	if get_parent().has_method("show_label"):
+		get_parent().show_label()
 
 
 func call_unregister_area():
-	%Label.hide()
-	InteractionManager.unregister_area()
+	InteractionManager.unregister_area(self)
+	if get_parent().has_method("hide_label"):
+		get_parent().hide_label()

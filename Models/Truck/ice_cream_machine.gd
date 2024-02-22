@@ -16,7 +16,6 @@ func _on_interact():
 	else:
 		reheld = true
 
-
 func _on_interact_released():
 	reheld = false
 	if $AnimationPlayer.is_playing() and $AnimationPlayer.current_animation == "icecream_end" or !$AnimationPlayer.is_playing():
@@ -47,3 +46,9 @@ func play_dispense_start_held():
 
 func play_dispense_flow():
 	$AnimationPlayer.play("icecream_flow")
+
+func show_label():
+	%Label.show()
+
+func hide_label():
+	%Label.hide()

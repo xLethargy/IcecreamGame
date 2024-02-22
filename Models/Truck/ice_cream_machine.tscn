@@ -72,6 +72,33 @@ size = Vector3(0.8, 1.75, 0.897229)
 [sub_resource type="BoxShape3D" id="BoxShape3D_n0cfk"]
 size = Vector3(0.0751953, 0.0748413, 0.0439758)
 
+[sub_resource type="Animation" id="Animation_n1ihl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icecream:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icecream:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_ply3r"]
 resource_name = "icecream_dispense"
 length = 1.5
@@ -98,33 +125,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 1.2707, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_n1ihl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icecream:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Icecream:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_8amu8"]
@@ -228,7 +228,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.638, 0.413)
 mesh = SubResource("BoxMesh_1c70g")
 
 [node name="Icecream" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2707, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Icecream"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140308, 0.325)
@@ -238,16 +238,15 @@ mesh = SubResource("BoxMesh_ghyqc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, -0.0501648)
 shape = SubResource("BoxShape3D_7k3ih")
 
-[node name="InteractionArea" parent="." groups=["Interactable"] instance=ExtResource("4_ngkx3")]
+[node name="InteractionArea" parent="." groups=["Button"] instance=ExtResource("4_ngkx3")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62469, 0)
-collision_layer = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0132385, 0.421249)
 shape = SubResource("BoxShape3D_n0cfk")
 
-[node name="Label" type="Label3D" parent="."]
+[node name="Label" type="Label3D" parent="." groups=["Label"]]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80514, 0.467248)
 visible = false
