@@ -18,6 +18,6 @@ func call_register_area():
 
 
 func call_unregister_area():
-	InteractionManager.unregister_area(self)
+	InteractionManager.unregister_area()
 	if get_parent().has_method("hide_label"):
 		get_parent().hide_label()

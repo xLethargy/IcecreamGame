@@ -42,6 +42,7 @@ mesh = SubResource("BoxMesh_i3gxc")
 skeleton = NodePath("../..")
 
 [node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.40939, 0, 0)
 
 [node name="Player" parent="Player" instance=ExtResource("1_omd05")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0)
@@ -55,10 +56,11 @@ shadow_enabled = true
 directional_shadow_max_distance = 250.0
 
 [node name="IcecreamTruck" parent="." instance=ExtResource("2_j22dh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Items" type="Node3D" parent="."]
 
 [node name="misterslender" parent="." instance=ExtResource("5_rdb2n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275, 2.855)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.275, -2.59891)
 
 [editable path="Player/Player"]

@@ -1,4 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7mj4np2yim0y"]
+[gd_scene load_steps=16 format=3 uid="uid://b7mj4np2yim0y"]
+
+[ext_resource type="Texture2D" uid="uid://kit6gqgyl34v" path="res://UI/Icecreams/icecream_chocolate_want.png" id="1_8isxs"]
+[ext_resource type="Script" path="res://Models/Player/npc.gd" id="1_ch27f"]
+[ext_resource type="PackedScene" uid="uid://byeiiaine1hik" path="res://Interaction/interaction_area.tscn" id="3_0u6b7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7q818"]
+radius = 0.395018
+height = 2.14114
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxs3x"]
 resource_name = "Material"
@@ -144,27 +152,49 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dgoxq")
 
-[node name="misterslender" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_empgj"]
+size = Vector3(1, 2.16016, 1.13818)
+
+[node name="misterslender" type="CharacterBody3D" groups=["Cone"]]
+script = ExtResource("1_ch27f")
+
+[node name="Hitbox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06882, 0)
+shape = SubResource("CapsuleShape3D_7q818")
 
 [node name="Meshes" type="Node3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1.275, 0)
 
 [node name="Cube" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(1.58066, 0, 0, 0, 1.58066, 0, 0, 0, 1.58066, 0, 4.0643, 0)
+transform = Transform3D(1.58066, 0, 0, 0, 1.58066, 0, 0, 0, 1.58066, 0, 0.00504208, 0)
 mesh = SubResource("ArrayMesh_osk7m")
 skeleton = NodePath("")
 
 [node name="Sphere" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(1.00646, 0, 0, 0, 1.00646, 0, 0, 0, 1.00646, 0, 7.0816, -0.112557)
+transform = Transform3D(1.00646, 0, 0, 0, 1.00646, 0, 0, 0, 1.00646, 0, 3.02234, -0.112557)
 mesh = SubResource("ArrayMesh_3vl0b")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(0.659161, 0, 0, 0, 0.408358, 0, 0, 0, 0.659161, 0, 4.96097, 0)
+transform = Transform3D(0.659161, 0, 0, 0, 0.408358, 0, 0, 0, 0.659161, 0, 0.901712, 0)
 mesh = SubResource("ArrayMesh_ncrsu")
 skeleton = NodePath("")
 
 [node name="Cube_002" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(0.91524, 0, 0, 0, 0.648681, 0, 0, 0, 0.772754, 0, 1.23281, 0)
+transform = Transform3D(0.91524, 0, 0, 0, 0.648681, 0, 0, 0, 0.772754, 0, -2.82645, 0)
 mesh = SubResource("ArrayMesh_yhufu")
 skeleton = NodePath("")
+
+[node name="Want" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15867, 2.10074, -0.593834)
+
+[node name="WantSprite" type="Sprite3D" parent="Want"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421544, 0, 0.345506)
+pixel_size = 0.0007
+texture = ExtResource("1_8isxs")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_0u6b7")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06882, -0.0690918)
+shape = SubResource("BoxShape3D_empgj")

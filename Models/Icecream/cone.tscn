@@ -40,3 +40,13 @@ shape = SubResource("CylinderShape3D_x2d3m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.388031, 0)
 visible = false
 mesh = SubResource("SphereMesh_15epi")
+
+[node name="Icecream2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.540215, 0)
+visible = false
+mesh = SubResource("SphereMesh_15epi")
+
+[node name="Icecream3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692, 0)
+visible = false
+mesh = SubResource("SphereMesh_15epi")

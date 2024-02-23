@@ -13,7 +13,7 @@ func register_area(area):
 	can_interact = true
 	
 
-func unregister_area(area):
+func unregister_area():
 	can_interact = false
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://e6sr5200qfdc"]
+[gd_scene load_steps=35 format=3 uid="uid://e6sr5200qfdc"]
 
 [ext_resource type="Material" uid="uid://dv8ko6mafx8x8" path="res://Materials/metal.tres" id="1_f51gf"]
 [ext_resource type="Script" path="res://Models/Truck/ice_cream_machine.gd" id="1_m12uo"]
@@ -6,21 +6,21 @@
 [ext_resource type="Material" uid="uid://cohyd83poom3k" path="res://Materials/chocolate.tres" id="4_i5p15"]
 [ext_resource type="PackedScene" uid="uid://byeiiaine1hik" path="res://Interaction/interaction_area.tscn" id="4_ngkx3"]
 [ext_resource type="Script" path="res://Models/Truck/Label.gd" id="5_7mtqv"]
-[ext_resource type="Script" path="res://Models/Truck/Placer.gd" id="6_bxfgq"]
+[ext_resource type="Script" path="res://Models/Truck/button_flavour.gd" id="5_blvnl"]
+[ext_resource type="PackedScene" uid="uid://b2v815iohhgkg" path="res://Models/Icecream/placer.tscn" id="6_d4w38"]
+[ext_resource type="Material" uid="uid://dycldn6gljsam" path="res://Materials/strawberry.tres" id="7_f4xxy"]
+[ext_resource type="Material" uid="uid://mraic8k1ir4k" path="res://Materials/blueberry.tres" id="8_fsh04"]
+[ext_resource type="BoxMesh" uid="uid://daiftnw83eor6" path="res://Models/Icecream/dispensed_icecream.tres" id="9_tg8d3"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_dumrt"]
-material = ExtResource("1_f51gf")
-size = Vector3(0.8, 1, 0.9)
-
-[sub_resource type="BoxMesh" id="BoxMesh_lgxfy"]
+[sub_resource type="BoxMesh" id="BoxMesh_m86dn"]
 material = ExtResource("1_f51gf")
 size = Vector3(0.8, 0.25, 0.9)
 
-[sub_resource type="BoxMesh" id="BoxMesh_gx1vj"]
+[sub_resource type="BoxMesh" id="BoxMesh_kca7j"]
 material = ExtResource("2_4y8h6")
 size = Vector3(0.2, 0.15, 0.25)
 
-[sub_resource type="SphereMesh" id="SphereMesh_5mdu4"]
+[sub_resource type="SphereMesh" id="SphereMesh_drj7j"]
 material = ExtResource("2_4y8h6")
 radius = 0.025
 height = 0.05
@@ -29,7 +29,7 @@ height = 0.05
 metallic = 1.0
 roughness = 0.2
 
-[sub_resource type="BoxMesh" id="BoxMesh_6bkm1"]
+[sub_resource type="BoxMesh" id="BoxMesh_dfi8b"]
 material = SubResource("StandardMaterial3D_8ohns")
 size = Vector3(0.025, 0.15, 0.025)
 
@@ -38,100 +38,81 @@ albedo_color = Color(0.803922, 0.803922, 0.803922, 1)
 metallic = 0.75
 roughness = 0.35
 
-[sub_resource type="BoxMesh" id="BoxMesh_77dnx"]
+[sub_resource type="BoxMesh" id="BoxMesh_dh6ym"]
 material = SubResource("StandardMaterial3D_gr3jn")
-size = Vector3(0.6, 0.5, 0.6)
+size = Vector3(0.7, 0.5, 0.6)
 
-[sub_resource type="BoxMesh" id="BoxMesh_5f2gr"]
+[sub_resource type="BoxMesh" id="BoxMesh_px3jj"]
+material = ExtResource("1_f51gf")
+size = Vector3(0.8, 1, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a8r3n"]
 material = ExtResource("1_f51gf")
 size = Vector3(0.1, 0.5, 0.9)
 
-[sub_resource type="BoxMesh" id="BoxMesh_u4w63"]
+[sub_resource type="BoxMesh" id="BoxMesh_58xdi"]
 material = ExtResource("1_f51gf")
 size = Vector3(0.6, 0.5, 0.1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0br0t"]
+[sub_resource type="BoxMesh" id="BoxMesh_hncfd"]
 material = ExtResource("4_i5p15")
-size = Vector3(0.075, 0.075, 0.025)
+size = Vector3(0.075, 0.05, 0.025)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6j6y2"]
+size = Vector3(0.075, 0.05, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pwttf"]
+material = ExtResource("7_f4xxy")
+size = Vector3(0.075, 0.05, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s571b"]
+material = ExtResource("8_fsh04")
+size = Vector3(0.075, 0.05, 0.025)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ffh51"]
 emission_enabled = true
 emission = Color(0.101961, 0.415686, 0, 1)
 emission_energy_multiplier = 10.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_1c70g"]
+[sub_resource type="BoxMesh" id="BoxMesh_w7x7v"]
 material = SubResource("StandardMaterial3D_ffh51")
 size = Vector3(0.075, 0.075, 0.025)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ghyqc"]
-material = ExtResource("4_i5p15")
-size = Vector3(0.025, 0.27, 0.025)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7k3ih"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_x6vh0"]
 size = Vector3(0.8, 1.75, 0.573306)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_n0cfk"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pbdmp"]
 size = Vector3(0.0759277, 0.0737884, 0.0348633)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mt0c5"]
-size = Vector3(0.25, 0.05, 0.2)
-
-[sub_resource type="Animation" id="Animation_n1ihl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icecream:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Icecream:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_ply3r"]
+[sub_resource type="Animation" id="Animation_iq512"]
 resource_name = "icecream_dispense"
 length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Icecream:scale")
+tracks/0/path = NodePath("Icecream:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.271, 0.325)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icecream:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1, 0, 1), Vector3(1, 1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Icecream:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1.2707, 0)]
-}
 
-[sub_resource type="Animation" id="Animation_8amu8"]
+[sub_resource type="Animation" id="Animation_wemp2"]
 resource_name = "icecream_end"
 length = 1.5
 tracks/0/type = "value"
@@ -144,10 +125,10 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 1.2707, 0), Vector3(0, 0.9, 0)]
+"values": [Vector3(0, 1.271, 0.325), Vector3(0, 1.025, 0.325)]
 }
 
-[sub_resource type="Animation" id="Animation_wq2kt"]
+[sub_resource type="Animation" id="Animation_xjdq8"]
 resource_name = "icecream_flow"
 loop_mode = 1
 tracks/0/type = "value"
@@ -163,89 +144,137 @@ tracks/0/keys = {
 "values": [Vector3(1, 1, 1), Vector3(1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_1rkfl"]
-resource_name = "dumb"
-length = 2.0
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yag62"]
-_data = {
-"RESET": SubResource("Animation_n1ihl"),
-"dumb": SubResource("Animation_1rkfl"),
-"icecream_dispense": SubResource("Animation_ply3r"),
-"icecream_end": SubResource("Animation_8amu8"),
-"icecream_flow": SubResource("Animation_wq2kt")
+[sub_resource type="Animation" id="Animation_nf2se"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icecream:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icecream:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.025, 0.325)]
 }
 
-[node name="IceCreamMachine" type="StaticBody3D"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lbeun"]
+_data = {
+"RESET": SubResource("Animation_nf2se"),
+"icecream_dispense": SubResource("Animation_iq512"),
+"icecream_end": SubResource("Animation_wemp2"),
+"icecream_flow": SubResource("Animation_xjdq8")
+}
+
+[node name="IcecreamMachine" type="StaticBody3D" groups=["Cone"]]
 script = ExtResource("1_m12uo")
 
 [node name="Meshes" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.05)
-mesh = SubResource("BoxMesh_dumrt")
-skeleton = NodePath("../..")
-
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.625, -0.05)
-mesh = SubResource("BoxMesh_lgxfy")
+mesh = SubResource("BoxMesh_m86dn")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0.325)
-mesh = SubResource("BoxMesh_gx1vj")
+mesh = SubResource("BoxMesh_kca7j")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28119, 0.325)
-mesh = SubResource("SphereMesh_5mdu4")
+mesh = SubResource("SphereMesh_drj7j")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0.465)
-mesh = SubResource("BoxMesh_6bkm1")
+mesh = SubResource("BoxMesh_dfi8b")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.1)
-mesh = SubResource("BoxMesh_77dnx")
+mesh = SubResource("BoxMesh_dh6ym")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.05)
+mesh = SubResource("BoxMesh_px3jj")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 1.25, -0.05)
-mesh = SubResource("BoxMesh_5f2gr")
+mesh = SubResource("BoxMesh_a8r3n")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.45)
-mesh = SubResource("BoxMesh_u4w63")
+mesh = SubResource("BoxMesh_58xdi")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 1.25, -0.05)
-mesh = SubResource("BoxMesh_5f2gr")
+mesh = SubResource("BoxMesh_a8r3n")
 skeleton = NodePath("../..")
 
 [node name="Buttons" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Buttons"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1.638, 0.413)
-mesh = SubResource("BoxMesh_0br0t")
+[node name="ChocolateButton" type="MeshInstance3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325072, 1.638, 0.413)
+mesh = SubResource("BoxMesh_hncfd")
+script = ExtResource("5_blvnl")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Buttons"]
+[node name="InteractionArea" parent="Buttons/ChocolateButton" instance=ExtResource("4_ngkx3")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/ChocolateButton/InteractionArea"]
+shape = SubResource("BoxShape3D_6j6y2")
+
+[node name="StrawberryButton" type="MeshInstance3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24, 1.638, 0.413)
+mesh = SubResource("BoxMesh_pwttf")
+script = ExtResource("5_blvnl")
+
+[node name="InteractionArea" parent="Buttons/StrawberryButton" instance=ExtResource("4_ngkx3")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/StrawberryButton/InteractionArea"]
+shape = SubResource("BoxShape3D_6j6y2")
+
+[node name="BlueberryButton" type="MeshInstance3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.155, 1.638, 0.413)
+mesh = SubResource("BoxMesh_s571b")
+script = ExtResource("5_blvnl")
+
+[node name="InteractionArea" parent="Buttons/BlueberryButton" instance=ExtResource("4_ngkx3")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/BlueberryButton/InteractionArea"]
+shape = SubResource("BoxShape3D_6j6y2")
+
+[node name="InteractButton" type="MeshInstance3D" parent="Buttons"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.638, 0.413)
-mesh = SubResource("BoxMesh_1c70g")
+mesh = SubResource("BoxMesh_w7x7v")
 
 [node name="Icecream" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1.2707, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.025, 0.325)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Icecream"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140308, 0.325)
-mesh = SubResource("BoxMesh_ghyqc")
+[node name="DispensedIcecream" type="MeshInstance3D" parent="Icecream"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.134924, 0)
+mesh = ExtResource("9_tg8d3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, -0.212126)
-shape = SubResource("BoxShape3D_7k3ih")
+shape = SubResource("BoxShape3D_x6vh0")
 
 [node name="InteractionArea" parent="." groups=["Button"] instance=ExtResource("4_ngkx3")]
 unique_name_in_owner = true
@@ -253,17 +282,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62469, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0135299, 0.41163)
-shape = SubResource("BoxShape3D_n0cfk")
+shape = SubResource("BoxShape3D_pbdmp")
 
-[node name="Placer" type="Node3D" parent="." groups=["Cone"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.300127)
-script = ExtResource("6_bxfgq")
-
-[node name="InteractionArea" parent="Placer" instance=ExtResource("4_ngkx3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0249636, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Placer/InteractionArea"]
-shape = SubResource("BoxShape3D_mt0c5")
+[node name="Placer" parent="." instance=ExtResource("6_d4w38")]
 
 [node name="Label" type="Label3D" parent="." groups=["Label"]]
 unique_name_in_owner = true
@@ -277,9 +298,8 @@ wait_time = 5.0
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-reset_on_save = false
 libraries = {
-"": SubResource("AnimationLibrary_yag62")
+"": SubResource("AnimationLibrary_lbeun")
 }
 
 [connection signal="timeout" from="HeldCheckTimer" to="." method="_on_held_check_timer_timeout"]

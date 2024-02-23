@@ -8,7 +8,7 @@ var stack_index = 0
 
 var holding_cone = false
 
-signal move_cone(node, icecream_finished, cone)
+signal move_cone(node, icecream_finished, cone, flavour)
 
 func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
@@ -23,6 +23,6 @@ func _on_interact():
 		return
 
 	stack_index += 1
-	move_cone.emit(Global.player.hand, false, cones[0].cones[stack_index - 1])
+	move_cone.emit(Global.player.hand, false, cones[0].cones[stack_index - 1], null)
 	if stack_index == cones[0].amount:
 		queue_free()

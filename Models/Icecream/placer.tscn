@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2v815iohhgkg"]
+
+[ext_resource type="Script" path="res://Models/Truck/Placer.gd" id="1_50og8"]
+[ext_resource type="PackedScene" uid="uid://byeiiaine1hik" path="res://Interaction/interaction_area.tscn" id="2_f2i5v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mt0c5"]
+size = Vector3(0.25, 0.05, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryyux"]
+albedo_color = Color(0, 0.603922, 0.501961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ulykt"]
+material = SubResource("StandardMaterial3D_ryyux")
+size = Vector3(0.25, 0.025, 0.2)
+
+[node name="Placer" type="Node3D" groups=["Cone"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.300127)
+script = ExtResource("1_50og8")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_f2i5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0249636, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("BoxShape3D_mt0c5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 0)
+mesh = SubResource("BoxMesh_ulykt")
+skeleton = NodePath("../..")

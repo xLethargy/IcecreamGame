@@ -2,7 +2,7 @@ extends Label3D
 
 
 
-func _process(delta):
+func _process(_delta):
 	self.text = "[E] to " + %InteractionArea.action_name
 	var player_position = Global.player.global_position
 	player_position.y = get_global_transform().origin.y
