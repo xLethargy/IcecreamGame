@@ -155,7 +155,7 @@ shadow_mesh = SubResource("ArrayMesh_dgoxq")
 [sub_resource type="BoxShape3D" id="BoxShape3D_empgj"]
 size = Vector3(1, 2.16016, 1.13818)
 
-[node name="misterslender" type="CharacterBody3D" groups=["Cone"]]
+[node name="misterslender" type="CharacterBody3D" groups=["Cone", "NPC"]]
 script = ExtResource("1_ch27f")
 
 [node name="Hitbox" type="CollisionShape3D" parent="."]

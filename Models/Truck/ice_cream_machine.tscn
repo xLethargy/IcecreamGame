@@ -84,66 +84,6 @@ size = Vector3(0.8, 1.75, 0.573306)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pbdmp"]
 size = Vector3(0.0759277, 0.0737884, 0.0348633)
 
-[sub_resource type="Animation" id="Animation_iq512"]
-resource_name = "icecream_dispense"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icecream:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1.271, 0.325)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Icecream:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1, 0, 1), Vector3(1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_wemp2"]
-resource_name = "icecream_end"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icecream:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.271, 0.325), Vector3(0, 1.025, 0.325)]
-}
-
-[sub_resource type="Animation" id="Animation_xjdq8"]
-resource_name = "icecream_flow"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icecream:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1, 1, 1), Vector3(1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_nf2se"]
 length = 0.001
 tracks/0/type = "value"
@@ -171,6 +111,66 @@ tracks/1/keys = {
 "values": [Vector3(0, 1.025, 0.325)]
 }
 
+[sub_resource type="Animation" id="Animation_iq512"]
+resource_name = "icecream_dispense"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icecream:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.271, 0.325)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icecream:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1, 0, 1), Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wemp2"]
+resource_name = "icecream_end"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icecream:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.271, 0.325), Vector3(0, 1.025, 0.325)]
+}
+
+[sub_resource type="Animation" id="Animation_xjdq8"]
+resource_name = "icecream_flow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icecream:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lbeun"]
 _data = {
 "RESET": SubResource("Animation_nf2se"),
@@ -186,46 +186,55 @@ script = ExtResource("1_m12uo")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.625, -0.05)
+layers = 16
 mesh = SubResource("BoxMesh_m86dn")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0.325)
+layers = 16
 mesh = SubResource("BoxMesh_kca7j")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28119, 0.325)
+layers = 16
 mesh = SubResource("SphereMesh_drj7j")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0.465)
+layers = 16
 mesh = SubResource("BoxMesh_dfi8b")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.1)
+layers = 16
 mesh = SubResource("BoxMesh_dh6ym")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.05)
+layers = 16
 mesh = SubResource("BoxMesh_px3jj")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 1.25, -0.05)
+layers = 16
 mesh = SubResource("BoxMesh_a8r3n")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -0.45)
+layers = 16
 mesh = SubResource("BoxMesh_58xdi")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 1.25, -0.05)
+layers = 16
 mesh = SubResource("BoxMesh_a8r3n")
 skeleton = NodePath("../..")
 
@@ -265,6 +274,14 @@ shape = SubResource("BoxShape3D_6j6y2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.638, 0.413)
 mesh = SubResource("BoxMesh_w7x7v")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Buttons/InteractButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0178725)
+light_color = Color(0.101961, 0.415686, 0, 1)
+light_energy = 0.25
+light_cull_mask = 4294967279
+omni_range = 0.0826259
+omni_attenuation = 2.0
+
 [node name="Icecream" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.025, 0.325)
 
@@ -294,7 +311,7 @@ text = "[E] to interact"
 script = ExtResource("5_7mtqv")
 
 [node name="HeldCheckTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

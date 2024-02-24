@@ -1,5 +1,9 @@
 extends Node
 
+var total = 0:
+	set(value):
+		total = value
+
 
 var holding_cone = false:
 	set(value):

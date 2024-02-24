@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bos4413hlehh6"]
+[gd_scene load_steps=3 format=3 uid="uid://bos4413hlehh6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_21j2u"]
 font_size = 64
 font_color = Color(0.298039, 0.933333, 0.317647, 1)
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_vo0yb"]
+script/source = "extends Label
+
+func _ready():
+	self.text = \"$\" + Global.total
+
+
+func change_money(value):
+	self.text = \"$\" + Global.total
+"
 
 [node name="Canvas" type="Control"]
 layout_mode = 3
@@ -40,3 +51,4 @@ offset_right = 0.679962
 offset_bottom = 0.119995
 text = "$0"
 label_settings = SubResource("LabelSettings_21j2u")
+script = SubResource("GDScript_vo0yb")

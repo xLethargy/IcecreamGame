@@ -17,6 +17,6 @@ func _on_interact():
 		space_taken = true
 		move_cone.emit(self, Global.player.hand.get_child(0).icecream_finished, Global.player.hand.get_child(0), Global.player.hand.get_child(0).icecream_single.get_surface_override_material(0))
 	elif !Global.holding_cone and space_taken:
-		move_cone.emit(Global.player.hand, self.get_child(2).icecream_finished, self.get_child(2), self.get_child(2).icecream_single.mesh.material)
+		move_cone.emit(Global.player.hand, self.get_child(2).icecream_finished, self.get_child(2), self.get_child(2).icecream_single.get_surface_override_material(0))
 		space_taken = false
 		

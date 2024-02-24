@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bjobo7t3g3xc7" path="res://Models/Truck/counter.tscn" id="3_81xdo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xm02w"]
-size = Vector3(8, 0.5, 4)
+size = Vector3(6.25, 0.5, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdtq3"]
 albedo_color = Color(0.992157, 0.698039, 0.858824, 1)
@@ -192,6 +192,10 @@ shape = SubResource("BoxShape3D_tj8mg")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 2, 0)
 shape = SubResource("BoxShape3D_rwh55")
+
+[node name="FloorCollision" type="CollisionShape3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12207, 3.75, 0)
+shape = SubResource("BoxShape3D_xm02w")
 
 [editable path="IceCreamMachine"]
 [editable path="IceCreamMachine2"]

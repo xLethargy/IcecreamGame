@@ -5,12 +5,13 @@ var cone_scene = preload("res://Models/Icecream/cone.tscn")
 func _ready():
 	for cone in get_tree().get_nodes_in_group("Cone"):
 		cone.connect("move_cone", _on_cone_move)
+	
+	for npc in get_tree().get_nodes_in_group("NPC"):
+		npc.connect("change_money", _change_money)
 
 
 func _on_cone_move(parent_node, icecream_finished, old_cone, flavour):
 	old_cone.queue_free()
-	
-	print ("EMITTED")
 	
 	if parent_node == null:
 		Global.holding_cone = false
@@ -30,4 +31,7 @@ func _on_cone_move(parent_node, icecream_finished, old_cone, flavour):
 	
 	
 	cone.connect("move_cone", _on_cone_move)
-	
+
+
+func _change_money():
+	$Canvas/Label.text = "$" + (str(Global.total))

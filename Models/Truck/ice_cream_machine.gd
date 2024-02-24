@@ -70,9 +70,7 @@ func _on_held_check_timer_timeout():
 	if $Placer.space_taken:
 		var icecream = $Placer.get_child(2)
 		if !icecream.icecream_single.visible:
-			move_cone.emit($Placer, true, icecream, icecream_flavour)
-		#icecream.visible = true
-		#$Placer.icecream_finished = true
+			move_cone.emit($Placer, true, icecream, $Icecream/DispensedIcecream.get_surface_override_material(0))
 
 
 func change_flavour(flavour):

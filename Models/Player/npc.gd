@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var pay = 1
+
 @onready var chocolate_icecream_single = preload("res://UI/Icecreams/icecream_chocolate_want.png")
 @onready var strawberry_icecream_single = preload("res://UI/Icecreams/icecream_strawberry_want.png")
 @onready var blueberry_icecream_single = preload("res://UI/Icecreams/icecream_blueberry_want.png")
@@ -18,6 +20,7 @@ var wanted_flavour
 var random_number
 
 signal move_cone(node, icecream_finished, cone)
+signal change_money
 
 func _ready():
 	random_number = randi() % 3
@@ -36,4 +39,6 @@ func _on_interact():
 			random_number = randi() % 3
 			$Want/WantSprite.texture = icecreams[random_number]
 			wanted_flavour = icecreams_flavour[random_number]
+			Global.total += 1
+			change_money.emit()
 	
